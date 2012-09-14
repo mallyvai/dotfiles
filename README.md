@@ -19,7 +19,7 @@ cp .vimrc ~/.vimrc
 
 See also the main Vundle repository:
 
-```https://github.com/gmarik/vundle```
+https://github.com/gmarik/vundle
 
 
 Tips:
