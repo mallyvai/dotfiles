@@ -19,11 +19,11 @@ cp .vimrc ~/.vimrc
 
 See also the main Vundle repository:
 
-```https://github.com/gmarik/vundle````
+```https://github.com/gmarik/vundle```
 
 
 Tips:
-====
+===
 
 To use Fuzzy File Finder from Vim, use ```Ctrl-i```  in normal mode (when you're not inserting, pasting, etc.
 
