@@ -82,11 +82,11 @@ set fileencodings=ucs-bom,utf-8,latin1,default
 set mouse=a
 
 " Tab == 4 spaces.
+set tabstop=8
+set softtabstop=0
 set expandtab
-set tabstop=2 
-set shiftwidth=2
-set softtabstop=2
-
+set shiftwidth=4
+set smarttab
 
 " Do not redraw while running macros (much faster).
 set lazyredraw 
