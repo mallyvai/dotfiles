@@ -1,18 +1,19 @@
-# contains basic shell customizations
+function activate_venv() {
+	TOP=$(git rev-parse --show-toplevel)
+	if [ -z $TOP ]; then
+		return
+	fi
 
-function git() {
-    if [ $1 == "root" ]
-    then
-      cd "$(command git rev-parse --show-toplevel)"
-    else
-      command git $*
-    fi
+	VENV_NAME=$(cat "$TOP"/.venv | xargs)
+	if [ -z $VENV_NAME ]; then
+		echo "Need a .venv file in the top level of the git project"
+	else
+		FNAME="~/Code/venvs/$VENV_NAME/bin/activate"
+		if [ ! -f "${FNAME}" ]; then
+			echo "Can't find virtualenv activation script at ${FNAME}"
+			echo "Does virtualenv exist?"
+			return
+		fi
+		. $FNAME
+	fi
 }
-
-if [ "$color_prompt" = yes ]; then
-    PS1='${debian_chroot:+($debian_chroot)}:\[\033[01;34m\]\w\[\033[00m\]\$ '
-else
-    PS1='${debian_chroot:+($debian_chroot)}:\w\$ '
-fi
-
-source /usr/local/bin/virtualenvwrapper.sh
