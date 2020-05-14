@@ -4,9 +4,9 @@ function activate_venv() {
 		return
 	fi
 
-	VENV_NAME=$(cat "$TOP"/.venv | xargs)
+	VENV_NAME=$(cat "$TOP"/.venv_name | xargs)
 	if [ -z $VENV_NAME ]; then
-		echo "Need a .venv file in the top level of the git project"
+		echo "Need a .venv_name file in the top level of the git project"
 	else
 		FNAME="~/Code/venvs/$VENV_NAME/bin/activate"
 		if [ ! -f "${FNAME}" ]; then
