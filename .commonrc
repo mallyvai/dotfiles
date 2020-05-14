@@ -8,8 +8,8 @@ function activate_venv() {
 	if [ -z $VENV_NAME ]; then
 		echo "Need a .venv_name file in the top level of the git project"
 	else
-		FNAME="~/Code/venvs/$VENV_NAME/bin/activate"
-		if [ ! -f "${FNAME}" ]; then
+		FNAME="$HOME/Code/venvs/$VENV_NAME/bin/activate"
+		if [[ ! -f ${FNAME} ]]; then
 			echo "Can't find virtualenv activation script at ${FNAME}"
 			echo "Does virtualenv exist?"
 			return
