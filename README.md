@@ -1,4 +1,4 @@
-vimrc
+## vimrc
 =====
 
 My .vimrc. Set up with Vundle.
@@ -26,5 +26,12 @@ Tips:
 ===
 
 To use Fuzzy File Finder from Vim, use ```Ctrl-i```  in normal mode (when you're not inserting, pasting, etc.
+
+
+
+## ZSHRC
+1. install oh-my-zsh
+2. manually download the `agnoster` theme's .rc file since oh-my-zsh's version is out of date
+3. set the agnoster prompt in the .zshrc - see .zshrc in this repo
 
 
